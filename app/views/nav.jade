@@ -1,0 +1,13 @@
+nav.navbar.navbar-default(ng-controller='NavCtrl')
+  .container
+    .navbar-header
+      a.navbar-brand(ng-if='!signedIn()' ng-href='/#/') TeamHub
+      a.navbar-brand(ng-if='signedIn()' ng-href='/#/main') TeamHub
+    .navbar-collapse.collapse
+      ul.nav.navbar-nav.pull-right
+        li(ng-if='!signedIn()')
+          a.btn.btn-link(ng-click='login()') Login
+        li(ng-if='signedIn()')
+          a.btn.btn-link(ng-href='#/profile') {{ user.profile.username }}
+        li(ng-if='signedIn()')
+          a.btn.btn-link(ng-click='logout()') Logout

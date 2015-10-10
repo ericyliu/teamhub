@@ -1,0 +1,10 @@
+.container-fluid
+  h1.text-center Register
+  form(ng-submit='register()')
+    .form-group
+      input.form-control(type='email' placeholder='Email' ng-model='user.email')
+    .form-group
+    input.form-control(type='password' placeholder='Password' ng-model='user.password')
+    br
+    input.btn.btn-default.text-center(type='submit' value='Register')
+  br

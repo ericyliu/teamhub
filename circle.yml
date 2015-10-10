@@ -1,0 +1,16 @@
+machine:
+  node:
+    version: 0.12
+
+
+general:
+  artifacts:
+    - features/screenshots
+
+
+test:
+  override:
+    - npm run lint-coffeescript
+    - npm run lint-stylus
+    - npm run unit-test
+    # Can't run feature tests on Circle as the LinkedIn login is suspicious

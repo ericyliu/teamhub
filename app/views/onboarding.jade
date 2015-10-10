@@ -1,0 +1,19 @@
+.container
+  h1 Please tell us about yourself.
+  br
+  form(ng-submit='confirm()')
+    .row
+      .form-group.col-md-4
+        input.form-control(type='text' placeholder='Username' ng-model='user.profile.username')
+    .row
+      .form-group.col-md-2
+        input.form-control(type='text' placeholder='First Name' ng-model='user.profile.first')
+      .form-group.col-md-2
+        input.form-control(type='text' placeholder='Last Name' ng-model='user.profile.last')
+    .row
+      .form-group.col-md-4
+        input.form-control(type='phone' placeholder='Phone #' ng-model='user.profile.phone')
+
+    br
+
+    input.btn.btn-default.text-center(type='submit' value='Confirm')
